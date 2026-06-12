@@ -169,7 +169,9 @@ const blogData = [
           allowfullscreen loading="lazy">
         </iframe>
       </div>
-    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Xem thêm ảnh: <a href="https://drive.google.com/drive/u/1/folders/1Pz1W7U2piczwwryqRGCGoEarvGtxfwPk"> Tại đây.</p>
+      <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Kho luận văn số SP Tin học K48, ĐHCT: <a href="https://drive.google.com/drive/u/1/folders/1_f2AsNyT33FuQ8UtcS1acQwu2PbGMdd6" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>
+      <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Sản phẩm American Hangout Lần I: <a href="LINK_ĐÚNG_Ở_ĐÂY" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>
+      <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Xem thêm ảnh: <a href="https://drive.google.com/drive/u/1/folders/1Pz1W7U2piczwwryqRGCGoEarvGtxfwPk" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>  
   `
 }
 ,{
