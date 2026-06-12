@@ -250,7 +250,7 @@ const blogData = [
     <p>Một buổi sáng đầy hứng khởi, đoàn CTUScratchDay lên đường với mong muốn mang công nghệ, sáng tạo và niềm vui học tập đến với các em học sinh Trường THCS & THPT Long Thạnh.</p>
     <p>Đồng hành cùng chương trình có TS. Bùi Lê Diễm, TS. Ngọc Thủy Thị Thái, trưởng đoàn Huỳnh Văn Diễn cùng các bạn sinh viên ngành Sư phạm Tin học. Về phía nhà trường, chương trình nhận được sự hỗ trợ nhiệt tình của cô Nguyễn Thị Pha Phăng, góp phần tạo nên một ngày trải nghiệm đầy ý nghĩa.</p>
 
-    <img src="images/envents/ScratchDay_LT/BG_ScratchDay.jpg" alt="Đoàn CTUScratchDay" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <img src="images/envents/ScratchDay_LT/BG_ScratchDay.jpg" alt="Đoàn CTUScratchDay" style="width:100%;height:450px;object-fit:cover;margin:16px 0;border-radius:4px">
     <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Đoàn CTUScratchDay xuất phát với tinh thần hứng khởi.</p>
 
     <p>Không khí chương trình nhanh chóng trở nên sôi nổi với sự tham gia nhiệt tình của các em học sinh.</p>
