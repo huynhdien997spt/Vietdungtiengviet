@@ -4,6 +4,7 @@
 
 /* ── NAVIGATION ── */
 const PAGES = ['home','about','activity','join','donate'];
+
 function goTo(id) {
   PAGES.forEach(p => {
     document.getElementById('page-'+p).classList.remove('active');
@@ -19,6 +20,13 @@ function goTo(id) {
   if(d) d.classList.add('active');
   window.scrollTo({top:0, behavior:'smooth'});
   if(id === 'about') initTimeline();
+
+  // Cập nhật URL theo trang (trang chủ thì xoá hash)
+  if(id === 'home') {
+    history.pushState(null, '', location.pathname + location.search);
+  } else {
+    history.pushState(null, '', '#' + id);
+  }
 }
 
 const toggle = document.getElementById('navToggle');
@@ -146,6 +154,29 @@ function filterBlogSelect(sel, type) {
 }
 
 /* ── BLOG MODAL ── */
+function openBlogModal(index) {
+  const b = blogData[index];
+  document.getElementById('modalTag').textContent = b.tag;
+  document.getElementById('modalTitle').textContent = b.title;
+  document.getElementById('modalMeta').textContent = b.meta;
+  document.getElementById('modalBody').innerHTML = b.body;
+  const img = document.getElementById('modalImg');
+  if(b.img) { img.src = b.img; img.style.display = 'block'; }
+  else { img.style.display = 'none'; }
+  document.getElementById('blogModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  history.pushState(null, '', '#blog-' + index);
+}
+function closeBlogModal() {
+  document.getElementById('blogModal').classList.remove('open');
+  document.body.style.overflow = '';
+  if(location.hash.startsWith('#blog-')) {
+    history.pushState(null, '', '#activity');
+  }
+}
+function closeModal(e) { if(e.target.id === 'blogModal') closeBlogModal(); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeBlogModal(); });
+
 /* ── ĐIỀU HƯỚNG THEO HASH (link riêng cho trang & bài blog) ── */
 function handleHashRoute() {
   const hash = location.hash;
@@ -195,13 +226,6 @@ function goToSilent(id) {
 window.addEventListener('load', handleHashRoute);
 window.addEventListener('hashchange', handleHashRoute);
 
-function closeBlogModal() {
-  document.getElementById('blogModal').classList.remove('open');
-  document.body.style.overflow = '';
-  if(location.hash.startsWith('#blog-')) {
-    history.pushState(null, '', '#activity');
-  }
-}
 /* ── DONORS CAROUSEL (render từ data.js) ── */
 function renderDonors() {
   const track = document.getElementById('donorsTrack');
@@ -261,29 +285,6 @@ document.addEventListener('click', e => {
   const res = document.getElementById('searchResults');
   if(wrap && !wrap.contains(e.target) && res && !res.contains(e.target)) closeSearch();
 });
-function goTo(id) {
-  PAGES.forEach(p => {
-    document.getElementById('page-'+p).classList.remove('active');
-    const b = document.getElementById('nav-'+p);
-    const d = document.getElementById('drawer-'+p);
-    if(b) b.classList.remove('active');
-    if(d) d.classList.remove('active');
-  });
-  document.getElementById('page-'+id).classList.add('active');
-  const b = document.getElementById('nav-'+id);
-  const d = document.getElementById('drawer-'+id);
-  if(b) b.classList.add('active');
-  if(d) d.classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  if(id === 'about') initTimeline();
-
-  // ← thêm: cập nhật URL theo trang (trang chủ thì xoá hash)
-  if(id === 'home') {
-    history.pushState(null, '', location.pathname + location.search);
-  } else {
-    history.pushState(null, '', '#' + id);
-  }
-}
 
 /* ── DECAP CMS OAuth ── */
 if(window.location.hash && window.location.hash.startsWith("#access_token")) {
