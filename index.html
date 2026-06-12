@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viết Đúng Tiếng Việt</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <button class="nav-logo" onclick="goTo('home')"><img src="images/uploads/logo_VĐTV.jpg" alt="VĐTV Logo"><span>Viết Đúng Tiếng Việt</span></button>
+    <ul class="nav-links">
+      <li><button onclick="goTo('about')" id="nav-about">Về chúng tôi</button></li>
+      <li><button onclick="goTo('activity')" id="nav-activity">Hoạt động</button></li>
+      <li><button onclick="goTo('join')" id="nav-join">Tham gia</button></li>
+      <li><button onclick="goTo('donate')" id="nav-donate">💛 Ủng hộ</button></li>
+    </ul>
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" onclick="toggleSearch()" aria-label="Tìm kiếm">🔍</button>
+      <div class="search-box" id="searchBox">
+        <input class="search-input" id="searchInput" type="text" placeholder="Tìm kiếm..."
+               oninput="runSearch(this.value)" onkeydown="if(event.key==='Escape')closeSearch()">
+        <button class="search-clear" onclick="closeSearch()">✕</button>
+      </div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-drawer" id="navDrawer">
+    <button onclick="goTo('about');closeMenu()" id="drawer-about">Về chúng tôi</button>
+    <button onclick="goTo('activity');closeMenu()" id="drawer-activity">Hoạt động</button>
+    <button onclick="goTo('join');closeMenu()" id="drawer-join">Tham gia</button>
+    <button onclick="goTo('donate');closeMenu()" id="drawer-donate">💛 Ủng hộ</button>
+  </div>
+</nav>
+
+<!-- ═══ TRANG CHỦ ═══ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Dự án giáo dục cộng đồng</div>
+      <h1>Viết Đúng<br><span>Tiếng Việt</span></h1>
+      <div class="hero-year">2021 — Đến Nay</div>
+      <p class="hero-quote"><em>"Ngôn ngữ là linh hồn của dân tộc."</em><br>— Nguyễn Hiến Lê</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="goTo('about')">Khám phá dự án</button>
+        <button class="btn-outline" onclick="goTo('activity')">Xem hoạt động</button>
+        <button class="btn-primary" onclick="goTo('donate')">💛 Ủng hộ chúng tôi</button>
+      </div>
+    </div>
+  </div>
+  <div class="home-strip">
+    <div class="strip-grid">
+      <div class="strip-item" onclick="goTo('about')"><div class="strip-num">5+</div><div class="strip-label">Năm hoạt động</div><div class="strip-sub">2021 — đến nay</div></div>
+      <div class="strip-item" onclick="goTo('activity')"><div class="strip-num">10+</div><div class="strip-label">Sự kiện lớn</div><div class="strip-sub">Scratch Day, Mùa Hè Số...</div></div>
+      <div class="strip-item" onclick="goTo('activity')"><div class="strip-num">6</div><div class="strip-label">Công cụ học mở</div><div class="strip-sub">OKMindmap, WebQuest...</div></div>
+      <div class="strip-item" onclick="goTo('join')"><div class="strip-num">∞</div><div class="strip-label">Cộng đồng</div><div class="strip-sub">Sinh viên, giảng viên, TNV</div></div>
+    </div>
+  </div>
+  <div class="slider-wrap">
+    <div class="slider-title">Khoảnh Khắc <span>Đáng Nhớ</span></div>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <!-- ★ THÊM/BỚT ẢNH SLIDER TẠI ĐÂY — nhớ đổi sliderTotal trong main.js -->
+        <img src="images/Slider/slider_2.jpg" alt="Ảnh 2">
+        <img src="images/Slider/slider_3.jpg" alt="Ảnh 3">
+        <img src="images/Slider/slider_4.jpg" alt="Ảnh 4">
+        <img src="images/Slider/slider_5.jpg" alt="Ảnh 5">
+        <img src="images/Slider/slider_6.jpg" alt="Ảnh 6">
+        <img src="images/Slider/slider_7.jpg" alt="Ảnh 7">
+        <img src="images/Slider/slider_8.jpg" alt="Ảnh 8">
+        <img src="images/Slider/slider_9.jpg" alt="Ảnh 9">
+        <img src="images/Slider/slider_10.jpg" alt="Ảnh 10">
+        <img src="images/Slider/slider_11.jpg" alt="Ảnh 11">
+        <img src="images/Slider/slider_12.jpg" alt="Ảnh 12">
+        <img src="images/Slider/slider_13.jpg" alt="Ảnh 13">
+        <img src="images/Slider/slider_14.jpg" alt="Ảnh 14">
+        <img src="images/Slider/slider_15.jpg" alt="Ảnh 15">
+      </div>
+      <button class="slider-btn slider-prev" onclick="moveSlider(-1)">&#8249;</button>
+      <button class="slider-btn slider-next" onclick="moveSlider(1)">&#8250;</button>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </div>
+  <footer>
+    <div class="footer-title">Viết Đúng Tiếng Việt</div>
+    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+    <div class="footer-nav">
+      <button onclick="goTo('about')">Về chúng tôi</button>
+      <button onclick="goTo('activity')">Hoạt động</button>
+      <button onclick="goTo('join')">Tham gia</button>
+      <button onclick="goTo('donate')">Ủng hộ</button>
+    </div>
+    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+  </footer>
+</div>
+
+<!-- ═══ VỀ CHÚNG TÔI ═══ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Trang 1 / 4</div>
+      <div class="page-hero-title">Về chúng tôi</div>
+      <div class="page-hero-sub">Khởi nguồn từ tình yêu tiếng Việt — dự án giáo dục cộng đồng ra đời giữa đại dịch.</div>
+    </div>
+  </div>
+  <div class="intro-block">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <div class="section-label">Về dự án</div>
+          <div class="section-title">Khởi nguồn<br>từ tình yêu<br>tiếng Việt</div>
+          <p>Dự án <strong style="color:#E8C96A">Viết Đúng Tiếng Việt</strong> được hình thành từ khát vọng khơi dậy tình yêu tiếng Việt – ngôn ngữ của tư duy, của văn hoá và của bản sắc Việt.</p>
+          <p>Trong thời đại số, việc giữ gìn và lan tỏa cách viết đúng – nói chuẩn – nghĩ sâu không chỉ là trách nhiệm ngôn ngữ, mà còn là hành động văn hoá và giáo dục công dân số.</p>
+          <p>Thành lập ngày <strong style="color:#E8C96A">02/08/2021</strong> tại Trường Đại học Cần Thơ, bởi Cô Bùi Lê Diễm và các sinh viên Sư phạm Tin học.</p>
+        </div>
+        <div class="intro-quote-box">
+          <blockquote>"Viết Đúng Tiếng Việt không chỉ dạy chữ, mà dạy tinh thần khai phóng, khơi gợi năng lực tự học, tư duy phản biện và sáng tạo của người Việt trong kỷ nguyên mở."</blockquote>
+          <cite>— Sứ mệnh dự án</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="timeline-wrap">
+    <div class="wrap">
+      <div class="section-label">Hành trình</div>
+      <div class="section-title">Các Giai Đoạn<br>Phát Triển</div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">02/08/2021</div><div class="timeline-title">Bình dân học vụ số</div><div class="timeline-body">Ra đời giữa đại dịch với các lớp học trực tuyến trên Google Meet và OKMindmap.</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2022 – Mở Rộng</div><div class="timeline-title">Scratch Day & Mùa Hè Số đầu tiên</div><div class="timeline-body">Bước ra ngoài không gian trực tuyến, đến các trường phổ thông. Anh Huỳnh Văn Diễn tiếp nhận quản lý.</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2023 – Tiếp Nối</div><div class="timeline-title">Tăng trưởng và gắn bó</div><div class="timeline-body">Scratch Day và Mùa Hè Số 2023 với số học sinh tăng rõ rệt.</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2024 – Liên Ngành</div><div class="timeline-title">WebQuest & Mở rộng ứng dụng</div><div class="timeline-body">Triển khai WebQuest, chia sẻ OKMindmap cho ngành Việt Nam học.</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2025 – Quốc Tế</div><div class="timeline-title">Hợp tác quốc tế & WebQuest 3.0</div><div class="timeline-body">Scratch Day tại ĐH An Giang, đón GS Won Ho từ Hàn Quốc, ra mắt WebQuest 3.0 và Mindfolio.</div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2026 – Chuẩn Hoá</div><div class="timeline-title">Hệ sinh thái khai phóng bền vững</div><div class="timeline-body">Chuẩn hóa WebQuest 3.0, BigBook, Sổ tay Văn hoá VĐTV. Hướng tới Trường học Khai phóng Số.</div></div>
+        <!-- ★ THÊM MỐC LỊCH SỬ MỚI TẠI ĐÂY -->
+      </div>
+    </div>
+  </div>
+  <div class="pillars-wrap">
+    <div class="wrap">
+      <div class="section-label">Định hướng</div>
+      <div class="section-title" style="color:#fff">Tầm Nhìn – Sứ Mệnh – Mục Tiêu</div>
+      <div class="pillars-grid">
+        <div class="pillar-card"><div class="pillar-icon">🌸</div><div class="pillar-name">Tầm Nhìn</div><div class="pillar-desc">Trường học trực tuyến kiểu mẫu, tiên phong Giáo dục Mở – Đạo đức – Công nghệ.</div></div>
+        <div class="pillar-card"><div class="pillar-icon">💡</div><div class="pillar-name">Sứ Mệnh</div><div class="pillar-desc">Môi trường học tập mở, nhân văn – nơi mọi người Việt học và dạy bằng tiếng Việt đúng, đẹp, chuẩn.</div></div>
+        <div class="pillar-card"><div class="pillar-icon">🎯</div><div class="pillar-name">Mục Tiêu</div><div class="pillar-desc">Hệ sinh thái giáo dục mở bằng tiếng Việt. Giúp người học biết học – biết nghĩ – biết sống đẹp.</div></div>
+        <div class="pillar-card"><div class="pillar-icon">🔧</div><div class="pillar-name">Công Cụ</div><div class="pillar-desc">OKMindmap, Scratch, WebQuest, Sketchnote – miễn phí, dễ dùng.</div></div>
+        <div class="pillar-card"><div class="pillar-icon">🤝</div><div class="pillar-name">Văn Hoá</div><div class="pillar-desc">"Chúng ta làm việc cùng nhau." Quyết định trên giá trị chung.</div></div>
+        <div class="pillar-card"><div class="pillar-icon">📖</div><div class="pillar-name">Mindfolio</div><div class="pillar-desc">Hồ sơ tư duy học tập mở – Học → Phản tư → Sáng tạo → Chia sẻ → Cải tiến.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="values-wrap">
+    <div class="wrap">
+      <div class="section-label">Nền tảng</div>
+      <div class="section-title">Giá Trị Cốt Lõi</div>
+      <div class="values-row">
+        <div class="value-tag">🌿 Cởi Mở</div><div class="value-tag">⚖️ Công Bằng</div><div class="value-tag">❤️ Đạo Đức</div><div class="value-tag">🦋 Khai Phóng</div><div class="value-tag">✨ Sáng Tạo</div>
+      </div>
+      <div class="values-detail">
+        <div class="value-item"><div class="value-name">🌿 Cởi Mở</div><div class="value-body">Dám lắng nghe, chia sẻ và học hỏi điều mới.</div></div>
+        <div class="value-item"><div class="value-name">⚖️ Công Bằng</div><div class="value-body">Tôn trọng sự khác biệt, tạo cơ hội cho mọi người.</div></div>
+        <div class="value-item"><div class="value-name">❤️ Đạo Đức</div><div class="value-body">Trái tim của dự án, định hướng mọi hành động dạy – học – sáng tạo.</div></div>
+        <div class="value-item"><div class="value-name">🦋 Khai Phóng</div><div class="value-body">Giải phóng tiềm năng, giúp người học tự chủ tư duy.</div></div>
+        <div class="value-item" style="grid-column:span 2"><div class="value-name">✨ Sáng Tạo</div><div class="value-body">Biến tri thức thành hành động. Mỗi sản phẩm học tập là một dấu ấn của cộng đồng VĐTV.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="team-wrap">
+    <div class="wrap">
+      <div class="section-label">Con người</div>
+      <div class="section-title">Đội ngũ sáng lập & dẫn dắt</div>
+      <div class="team-grid">
+        <!-- ★ THÊM THÀNH VIÊN MỚI TẠI ĐÂY — copy 1 team-card -->
+        <div class="team-card"><div class="team-avatar"><img src="images/uploads/bui_le_diem.jpg" alt="Cô Bùi Lê Diễm"></div><div class="team-name">Cô Bùi Lê Diễm</div><div class="team-role">Sáng lập & Cố vấn học thuật</div><div class="team-desc">Giảng viên Bộ môn SP Tin học, ĐH Cần Thơ.</div></div>
+        <div class="team-card"><div class="team-avatar"><img src="images/uploads/huynh_van_dien.jpg" alt="Anh Huỳnh Văn Diễn"></div><div class="team-name">Anh Huỳnh Văn Diễn</div><div class="team-role">Quản lý & Phát triển chiến lược</div><div class="team-desc">SV SP Tin học K47, ĐHCT. Quản lý từ 2022.</div></div>
+        <div class="team-card"><div class="team-avatar"><img src="images/uploads/anh_thu.jpg" alt="Chị Võ Thị Anh Thư"></div><div class="team-name">Chị Võ Thị Anh Thư</div><div class="team-role">Đồng sáng lập · Giai đoạn đầu</div><div class="team-desc">SV SP Tin học K46, ĐHCT. 2021–2022.</div></div>
+        <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#AFA9EC,#7F77DD)">TNV</div><div class="team-name">Đội tình nguyện viên</div><div class="team-role">Sinh viên Sư phạm Tin học</div><div class="team-desc">Hàng chục sinh viên ĐHCT tình nguyện dạy học mỗi mùa hè.</div></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-title">Viết Đúng Tiếng Việt</div>
+    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+    <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('activity')">Hoạt động</button><button onclick="goTo('join')">Tham gia</button><button onclick="goTo('donate')">Ủng hộ</button></div>
+    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+  </footer>
+</div>
+
+<!-- ═══ HOẠT ĐỘNG ═══ -->
+<div class="page" id="page-activity">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Trang 2 / 4</div>
+      <div class="page-hero-title">Hoạt động</div>
+      <div class="page-hero-sub">Sự kiện thực địa, bài viết cộng đồng và kho học liệu mở.</div>
+    </div>
+  </div>
+  <div class="activity-tabs">
+    <div class="activity-tabs-inner">
+      <button class="tab-btn active" onclick="switchTab('events',this)">📅 Sự kiện & Blog</button>
+      <button class="tab-btn" onclick="switchTab('resources',this)">📚 Học liệu mở</button>
+    </div>
+  </div>
+  <div class="tab-content active" id="tab-events">
+    <div class="wrap">
+      <div class="section-label">Sự kiện tiêu biểu</div>
+      <div class="section-title">Những Hoạt Động Đáng Nhớ</div>
+      <div class="events-grid">
+        <!-- ★ THÊM SỰ KIỆN MỚI TẠI ĐÂY — copy 1 event-card, đổi số thứ tự -->
+        <div class="event-card"><div class="event-number">01</div><div class="event-title">🖥️ Ngày Hội Scratch Day</div><div class="event-desc">Tổ chức tại trường học khắp ĐBSCL. Học sinh vẽ Mindmap, lập trình và trình diễn sản phẩm trên Scratch & OctoStudio.</div></div>
+        <div class="event-card"><div class="event-number">02</div><div class="event-title">☀️ Mùa Hè Số</div><div class="event-desc">Chương trình hè thường niên, từ 2022 đến "Búp Sen Xanh" 2025. Học sinh học, làm và trải nghiệm sáng tạo nội dung số.</div></div>
+        <div class="event-card"><div class="event-number">03</div><div class="event-title">🛠️ Workshop Kỹ Năng</div><div class="event-desc">Huấn luyện Mindmap, Sketchnote, OctoStudio, WebQuest – rèn "kỹ năng học để học".</div></div>
+        <div class="event-card"><div class="event-number">04</div><div class="event-title">🏆 Cuộc Thi WebQuest</div><div class="event-desc">Sân chơi học thuật cho sinh viên và giáo viên thiết kế bài học mở trên OKMindmap.</div></div>
+        <div class="event-card full"><div class="event-number">05</div><div class="event-title">🎵 Cần Thơ By Night</div><div class="event-desc">Sự kiện văn hoá – nghệ thuật nội bộ: âm nhạc, trình diễn và kể chuyện bằng công nghệ số.</div></div>
+      </div>
+
+      <div class="section-label" style="margin-top:60px">Blog & tin tức</div>
+      <div class="section-title">Bài Viết Mới Nhất</div>
+      <div class="blog-filter">
+        <div class="filter-group">
+          <span class="filter-label">Năm:</span>
+          <select class="filter-select" onchange="filterBlogSelect(this,'year')">
+            <option value="all">Tất cả</option>
+            <option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option>
+            <option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Tháng:</span>
+          <select class="filter-select" onchange="filterBlogSelect(this,'month')">
+            <option value="all">Tất cả</option>
+            <option value="1">Tháng 1</option><option value="2">Tháng 2</option><option value="3">Tháng 3</option>
+            <option value="4">Tháng 4</option><option value="5">Tháng 5</option><option value="6">Tháng 6</option>
+            <option value="7">Tháng 7</option><option value="8">Tháng 8</option><option value="9">Tháng 9</option>
+            <option value="10">Tháng 10</option><option value="11">Tháng 11</option><option value="12">Tháng 12</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Chủ đề:</span>
+          <select class="filter-select" onchange="filterBlogSelect(this,'tag')">
+            <option value="all">Tất cả</option>
+            <option value="su-kien">Sự kiện</option><option value="phuong-phap">Phương pháp</option>
+            <option value="cong-dong">Cộng đồng</option><option value="hoc-lieu">Học liệu</option>
+          </select>
+        </div>
+      </div>     
+      <div class="blog-carousel-wrap">
+      <div class="blog-carousel-track" id="blogTrack">
+              <!-- ★ THÊM BÀI BLOG MỚI TẠI ĐÂY
+               Bước 1: Thêm blog-card bên dưới (tăng số openBlogModal)
+               Bước 2: Thêm object vào blogData trong data.js -->
+        <div class="blog-card" onclick="openBlogModal(0)" data-year="2025" data-month="5" data-tag="su-kien">
+          <img class="blog-card-img" src="images/envents/AGU/star_envent.jpg" alt="Scratch Day AGU" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="blog-card-img-placeholder" style="display:none">🖥️</div>
+          <div class="blog-card-body">
+            <div class="blog-date">Ngày 10 tháng 5 năm 2025</div>
+            <div class="blog-title">Scratch Day 2025 tại ĐH An Giang – Khai phóng lan rộng</div>
+            <div class="blog-excerpt">Lần đầu tiên Scratch Day tổ chức tại ĐH An Giang, mở ra chương mới trong hành trình lan tỏa tinh thần học sáng tạo...</div>
+            <span class="blog-tag">Sự kiện</span>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogModal(1)" data-year="2025" data-month="1" data-tag="phuong-phap">
+          <img class="blog-card-img" src="images/blog /webquest/Mekong_river.jpg" alt="Mekong" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="blog-card-img-placeholder" style="display:none">🖥️</div>
+          <div class="blog-card-body">
+            <div class="blog-date">Tháng 1 năm 2025</div>
+            <div class="blog-title">WebQuest 3.0 và cách nó thay đổi việc dạy học</div>
+            <div class="blog-excerpt">Mô hình WebQuest 3.0 tích hợp OKMindmap và tư duy phản biện...</div>
+            <span class="blog-tag">Phương pháp</span>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogModal(2)" data-year="2024" data-month="11" data-tag="cong-dong">
+          <div class="blog-card-img-placeholder">🤝</div>
+          <div class="blog-card-body">
+            <div class="blog-date">11/2024</div>
+            <div class="blog-title">GS Won Ho thăm VĐTV – Cầu nối Việt–Hàn</div>
+            <div class="blog-excerpt">"Cha đẻ OKMindmap" chia sẻ tầm nhìn về học tập mở toàn cầu...</div>
+            <span class="blog-tag">Cộng đồng</span>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogModal(3)" data-year="2026" data-month="4" data-tag="su-kien">
+          <img class="blog-card-img" src="images/envents/LVS/tapthe.jpg" alt="Luận văn số" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="blog-card-img-placeholder" style="display:none">📚</div>
+          <div class="blog-card-body">
+            <div class="blog-date">20/4/2026</div>
+            <div class="blog-title">Luận Văn Số – Học Liệu Mở: Hướng đến hệ sinh thái tri thức sáng tạo</div>
+            <div class="blog-excerpt">Hơn 100 sinh viên và giảng viên ĐH Cần Thơ cùng trải nghiệm mô hình luận văn mở...</div>
+            <span class="blog-tag">Sự kiện</span>
+          </div>
+        </div>
+
+        <div class="blog-card" onclick="openBlogModal(4)" data-year="2026" data-month="4" data-tag="su-kien">
+          <img class="blog-card-img" src="images/envents/ScratchDay_TLA/anh_bia.jpg" alt="Long Thành A" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="blog-card-img-placeholder" style="display:none">🌱</div>
+          <div class="blog-card-body">
+            <div class="blog-date">4/4/2026</div>
+            <div class="blog-title">Hành trình gieo những hạt giống sáng tạo tại Trường Tiểu học Long Thành A</div>
+            <div class="blog-excerpt">6 giờ sáng xuất phát từ Cần Thơ, một ngày hội Mindmap, Origami và Scratch đầy ắp tiếng cười...</div>
+            <span class="blog-tag">Sự kiện</span>
+          </div>
+        </div>
+        <div class="blog-card" onclick="openBlogModal(5)" data-year="2026" data-month="4" data-tag="su-kien">
+            <img class="blog-card-img" src="images/envents/ScratchDay_LT/anh_bia.jpg" alt="Long Thạnh"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="blog-card-img-placeholder" style="display:none">🚀</div>
+            <div class="blog-card-body">
+              <div class="blog-date">23/4/2026</div>
+              <div class="blog-title">Mang công nghệ và sáng tạo đến Trường THCS & THPT Long Thạnh</div>
+              <div class="blog-excerpt">Mindmap, OctoStudio và tinh thần CTUScratchDay — một ngày đầy cảm hứng cùng học sinh Long Thạnh...</div>
+              <span class="blog-tag">Sự kiện</span>
+            </div>
+  </div>
+  </div><!-- đóng blogTrack -->
+  <div class="blog-nav">
+    <button class="blog-nav-btn" onclick="moveBlog(-1)">&#8249;</button>
+    <div class="blog-nav-dots" id="blogDots"></div>
+    <button class="blog-nav-btn" onclick="moveBlog(1)">&#8250;</button>
+        </div>
+      </div>
+      </div>
+      </div>
+          <!-- Kho học liệu mở -->
+  <div class="tab-content" id="tab-resources">
+    <div class="wrap">
+      <div class="section-label">Kho tài nguyên</div>
+      <div class="section-title">Học Liệu Mở Miễn Phí</div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="tool-icon">🗺️</div><div class="tool-name">OKMindmap</div><div class="tool-desc">Bản đồ tư duy trực tuyến – nền tảng hệ sinh thái học tập VĐTV. Miễn phí, không cài đặt.</div><a href="https://okmindmap.com" target="_blank" class="tool-link">Truy cập →</a></div>
+        <div class="tool-card"><div class="tool-icon">🔍</div><div class="tool-name">WebQuest 3.0</div><div class="tool-desc">Bài học mở tích hợp tư duy phản biện và OKMindmap.</div><a href="#" class="tool-link">Xem mẫu →</a></div>
+        <div class="tool-card"><div class="tool-icon">🐱</div><div class="tool-name">Scratch & OctoStudio</div><div class="tool-desc">Lập trình sáng tạo cho học sinh. Scratch trên máy tính, OctoStudio trên điện thoại.</div><a href="https://scratch.mit.edu" target="_blank" class="tool-link">Truy cập →</a></div>
+        <div class="tool-card"><div class="tool-icon">✏️</div><div class="tool-name">Sketchnote</div><div class="tool-desc">Ghi chú bằng hình ảnh – kết hợp chữ và ký hoạ để tư duy rõ hơn.</div><a href="#" class="tool-link">Hướng dẫn →</a></div>
+        <div class="tool-card"><div class="tool-icon">📂</div><div class="tool-name">Mindfolio</div><div class="tool-desc">Hồ sơ tư duy học tập mở – ghi lại hành trình Học → Phản tư → Sáng tạo → Chia sẻ.</div><a href="#" class="tool-link">Tìm hiểu →</a></div>
+        <div class="tool-card"><div class="tool-icon">📘</div><div class="tool-name">BigBook & Sổ tay VĐTV</div><div class="tool-desc">Tài liệu phương pháp và văn hoá dự án. Mở cho cộng đồng tải tự do.</div><a href="#" class="tool-link">Tải về →</a></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-title">Viết Đúng Tiếng Việt</div>
+    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+    <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('about')">Về chúng tôi</button><button onclick="goTo('join')">Tham gia</button><button onclick="goTo('donate')">Ủng hộ</button></div>
+    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+  </footer>
+</div>
+
+<!-- BLOG MODAL -->
+<div class="modal-overlay" id="blogModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-close"><button onclick="closeBlogModal()">✕</button></div>
+    <div class="modal-content">
+      <span class="modal-tag" id="modalTag"></span>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+      <img class="modal-img" id="modalImg" src="" alt="" style="display:none">
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ THAM GIA ═══ -->
+<div class="page" id="page-join">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Trang 3 / 4</div>
+      <div class="page-hero-title">Tham gia cộng đồng</div>
+      <div class="page-hero-sub">Dù bạn là giáo viên hay học viên — luôn có chỗ cho bạn ở đây.</div>
+    </div>
+  </div>
+  <div class="join-tabs">
+    <div class="join-tabs-inner">
+      <button class="join-tab-btn active" onclick="switchJoinTab('teacher',this)">👩‍🏫 Dành cho Giáo viên</button>
+      <button class="join-tab-btn" onclick="switchJoinTab('student',this)">🎓 Dành cho Học viên</button>
+    </div>
+  </div>
+  <div class="join-tab-content active" id="join-tab-teacher">
+    <div style="background:var(--ivory)">
+      <div class="wrap">
+        <div class="section-label">Quyền lợi</div>
+        <div class="section-title">Khi tham gia với tư cách Giáo viên</div>
+        <div class="benefit-grid">
+          <div class="benefit-card"><div class="benefit-icon">📚</div><div class="benefit-title">Tiếp cận học liệu mở</div><div class="benefit-desc">Toàn bộ tài liệu WebQuest, OKMindmap, BigBook miễn phí.</div></div>
+          <div class="benefit-card"><div class="benefit-icon">🤝</div><div class="benefit-title">Kết nối cộng đồng</div><div class="benefit-desc">Gặp gỡ giáo viên, giảng viên cùng chí hướng trên khắp ĐBSCL.</div></div>
+          <div class="benefit-card"><div class="benefit-icon">🏆</div><div class="benefit-title">Chứng nhận tham gia</div><div class="benefit-desc">Nhận giấy chứng nhận sau mỗi sự kiện Scratch Day, Mùa Hè Số.</div></div>
+          <div class="benefit-card"><div class="benefit-icon">🎓</div><div class="benefit-title">Đào tạo miễn phí</div><div class="benefit-desc">Workshop kỹ năng dạy học với công nghệ mở.</div></div>
+          <div class="benefit-card"><div class="benefit-icon">✨</div><div class="benefit-title">Cùng sáng tạo nội dung</div><div class="benefit-desc">Đồng tác giả WebQuest, Mindfolio được chia sẻ cộng đồng.</div></div>
+          <div class="benefit-card"><div class="benefit-icon">💛</div><div class="benefit-title">Hỗ trợ hậu cần</div><div class="benefit-desc">Hỗ trợ chi phí đi lại đến trường vùng xa.</div></div>
+        </div>
+        <div class="join-grid">
+          <div>
+            <div class="section-label" style="margin-top:0">Đăng ký</div>
+            <div class="section-title">Trở thành Giáo viên đồng hành</div>
+            <div class="join-form-wrap">
+              <div class="join-form-title">Điền thông tin để tham gia</div>
+              <div class="form-group"><label>Họ và tên</label><input type="text" placeholder="Nguyễn Văn A"></div>
+              <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div>
+              <div class="form-group"><label>Trường / Đơn vị</label><input type="text" placeholder="Trường THPT ABC"></div>
+              <div class="form-group"><label>Môn dạy</label><input type="text" placeholder="Tin học, Toán, Ngữ văn..."></div>
+              <div class="form-group"><label>Vai trò mong muốn</label>
+                <select><option>Giảng dạy tại Scratch Day</option><option>Hướng dẫn Mùa Hè Số</option><option>Thiết kế học liệu WebQuest</option><option>Cố vấn nội dung</option><option>Khác</option></select>
+              </div>
+              <div class="form-group"><label>Lời nhắn</label><textarea placeholder="Kinh nghiệm hoặc điều bạn muốn đóng góp..."></textarea></div>
+              <a href="https://forms.gle/1BktcPzwc7NYikAm7" target="_blank" class="submit-btn" style="display:block;text-align:center;text-decoration:none">Gửi đăng ký →</a>
+            </div>
+          </div>
+          <div>
+            <div class="section-label" style="margin-top:0">Kết nối</div>
+            <div class="section-title">Tìm chúng tôi</div>
+            <div class="join-social">
+              <a href="#" class="social-link"><span class="social-icon">📘</span><div><div class="social-name">Facebook</div><div class="social-handle">facebook.com/vietdungtiengviet.sptinhoc.ctu.edu.vn</div></div></a>
+              <a href="#" class="social-link"><span class="social-icon">▶️</span><div><div class="social-name">YouTube</div><div class="social-handle">youtube.com/@hoccungnhaune</div></div></a>
+              <a href="#" class="social-link"><span class="social-icon">🗺️</span><div><div class="social-name">OKMindmap</div><div class="social-handle">okmindmap.com</div></div></a>
+            </div>
+            <div class="contact-info-block">
+              <p><strong>Địa chỉ:</strong> Bộ môn SP Tin học, ĐH Cần Thơ</p>
+              <p><strong>Email:</strong> bldiem@ctu.edu.vn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="join-tab-content" id="join-tab-student">
+    <div style="background:var(--ivory)">
+      <div class="wrap">
+        <div class="section-label">Học miễn phí</div>
+        <div class="section-title">Khoá học dành cho Học viên</div>
+        <div class="course-grid">
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Miễn phí</span><div class="course-title">🐱 Scratch & OctoStudio</div><div class="course-desc">Lập trình sáng tạo qua dự án thực tế. Dành cho học sinh từ 8 tuổi.</div></div></div>
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Miễn phí</span><div class="course-title">🗺️ OKMindmap & Mindfolio</div><div class="course-desc">Vẽ bản đồ tư duy, xây dựng hồ sơ học tập số.</div></div></div>
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Miễn phí</span><div class="course-title">✏️ Sketchnote sáng tạo</div><div class="course-desc">Ghi chú bằng hình ảnh – học nhanh hơn, nhớ lâu hơn.</div></div></div>
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Sự kiện</span><div class="course-title">☀️ Mùa Hè Số</div><div class="course-desc">Học, sáng tạo và trình diễn sản phẩm số cùng bạn bè.</div></div></div>
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Sự kiện</span><div class="course-title">🖥️ Scratch Day</div><div class="course-desc">Ngày hội lập trình – trải nghiệm, thi đấu, nhận chứng nhận.</div></div></div>
+          <div class="course-card"><div class="course-card-body"><span class="course-badge">Workshop</span><div class="course-title">🔍 WebQuest Explorer</div><div class="course-desc">Khám phá kiến thức qua nhiệm vụ học tập mở.</div></div></div>
+        </div>
+        <div class="join-grid">
+          <div>
+            <div class="section-label" style="margin-top:0">Đăng ký</div>
+            <div class="section-title">Tham gia học miễn phí</div>
+            <div class="join-form-wrap">
+              <div class="join-form-title">Điền thông tin để đăng ký</div>
+              <div class="form-group"><label>Họ và tên</label><input type="text" placeholder="Nguyễn Văn A"></div>
+              <div class="form-group"><label>Tuổi / Lớp</label><input type="text" placeholder="Lớp 8, Trường THCS ABC"></div>
+              <div class="form-group"><label>Email liên hệ</label><input type="email" placeholder="email@example.com"></div>
+              <div class="form-group"><label>Khoá học muốn tham gia</label>
+                <select><option>Scratch & OctoStudio</option><option>OKMindmap & Mindfolio</option><option>Sketchnote</option><option>Mùa Hè Số</option><option>Scratch Day</option><option>WebQuest Explorer</option></select>
+              </div>
+              <div class="form-group"><label>Lời nhắn</label><textarea placeholder="Bạn muốn học gì?"></textarea></div>
+              <a href="https://forms.gle/1BktcPzwc7NYikAm7" target="_blank" class="submit-btn" style="display:block;text-align:center;text-decoration:none">Gửi đăng ký →</a>
+            </div>
+          </div>
+          <div>
+            <div class="section-label" style="margin-top:0">Kết nối</div>
+            <div class="section-title">Tìm chúng tôi</div>
+            <div class="join-social">
+              <a href="#" class="social-link"><span class="social-icon">📘</span><div><div class="social-name">Facebook</div><div class="social-handle">facebook.com/vietdungtiengviet.sptinhoc.ctu.edu.vn</div></div></a>
+              <a href="#" class="social-link"><span class="social-icon">▶️</span><div><div class="social-name">YouTube</div><div class="social-handle">youtube.com/@hoccungnhaune</div></div></a>
+            </div>
+            <div class="contact-info-block">
+              <p><strong>Email:</strong> bldiem@ctu.edu.vn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-title">Viết Đúng Tiếng Việt</div>
+    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+    <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('about')">Về chúng tôi</button><button onclick="goTo('activity')">Hoạt động</button><button onclick="goTo('donate')">Ủng hộ</button></div>
+    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+  </footer>
+</div>
+
+<!-- ═══ DONATE ═══ -->
+<div class="page" id="page-donate">
+  <div class="page-hero" style="background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid))">
+    <div class="page-hero-inner">
+      <div class="page-hero-label">Trang 4 / 4</div>
+      <div class="page-hero-title">💛 Ủng hộ<br>Viết Đúng Tiếng Việt</div>
+      <div class="page-hero-sub">Mỗi đóng góp giúp thêm một học sinh được học, một tình nguyện viên được hỗ trợ.</div>
+    </div>
+  </div>
+  <div style="background:var(--ivory)">
+    <div class="wrap">
+      <div class="section-label">Câu chuyện tác động</div>
+      <div class="section-title">Tiền ủng hộ đã làm được gì?</div>
+      <div class="impact-grid">
+        <div class="impact-card"><div class="impact-number">500+</div><div class="impact-label">Học sinh tham gia Scratch Day và Mùa Hè Số</div></div>
+        <div class="impact-card"><div class="impact-number">10+</div><div class="impact-label">Trường học tiếp cận phương pháp giáo dục mở</div></div>
+        <div class="impact-card"><div class="impact-number">100%</div><div class="impact-label">Học liệu và sự kiện miễn phí với học sinh</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="donate-action">
+    <div class="wrap">
+      <div class="section-label">Đóng góp</div>
+      <div class="section-title">Chọn mức ủng hộ</div>
+      <div class="donate-levels">
+        <div class="level-card" onclick="selectLevel(this)"><div class="level-amount">50.000đ</div><div class="level-desc">Vật liệu 1 buổi học Sketchnote</div></div>
+        <div class="level-card featured" onclick="selectLevel(this)"><div class="level-badge">Phổ biến nhất</div><div class="level-amount">100.000đ</div><div class="level-desc">1 suất học Scratch Day</div></div>
+        <div class="level-card" onclick="selectLevel(this)"><div class="level-amount">200.000đ</div><div class="level-desc">Tài liệu cho nhóm 10 học sinh</div></div>
+        <div class="level-card" onclick="selectLevel(this)"><div class="level-amount">Tùy tâm</div><div class="level-desc">Bất kỳ số tiền nào đều có ý nghĩa</div></div>
+      </div>
+      <div class="qr-wrap">
+        <div class="qr-card">
+          <img src="images/donate/qr_momo.jpg" alt="QR Momo" style="width:180px;height:180px;object-fit:cover;margin:0 auto 16px">
+          <div class="qr-method">Ví Momo</div>
+          <div class="qr-detail">Số điện thoại: <strong>0828.294.600</strong></div>
+        </div>
+        <div class="qr-card">
+          <img src="images/donate/qr_mbbank.jpg" alt="QR MBbank" style="width:180px;height:180px;object-fit:cover;margin:0 auto 16px">
+          <div class="qr-method">Chuyển khoản MBbank</div>
+          <div class="qr-detail">STK: <strong>9429012003</strong><br>Chủ TK: <strong>HUYNH VAN DIEN</strong><br>Nội dung: <strong>VĐTV [họ tên]</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="transparency-wrap">
+    <div class="wrap">
+      <div class="section-label">Minh bạch</div>
+      <div class="section-title">Tiền được dùng để làm gì?</div>
+      <div class="use-grid">
+        <div class="use-item"><div class="use-pct">50%</div><div class="use-name">Vật liệu & in ấn</div><div class="use-desc">Giấy, bút, poster, tài liệu cho Scratch Day và Mùa Hè Số.</div></div>
+        <div class="use-item"><div class="use-pct">30%</div><div class="use-name">Di chuyển & hậu cần</div><div class="use-desc">Chi phí đi lại cho tình nguyện viên đến trường vùng xa.</div></div>
+        <div class="use-item"><div class="use-pct">20%</div><div class="use-name">Phát triển nội dung</div><div class="use-desc">Xây dựng học liệu mở, BigBook, Sổ tay Văn hoá VĐTV.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="donors-wrap">
+    <div class="wrap">
+      <div class="section-label">Lòng biết ơn</div>
+      <div class="section-title">Những Ân Nhân Của Dự Án</div>
+      <p style="color:var(--warm-gray);font-size:0.94rem;line-height:1.9;max-width:560px;margin-top:-24px;margin-bottom:8px">
+        Cảm ơn tất cả những ai đã tin tưởng và đồng hành cùng VĐTV.
+      </p>
+    </div>
+    <!-- Carousel render tự động từ donorsData trong data.js -->
+    <div class="donors-carousel">
+      <div class="donors-track" id="donorsTrack"></div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-title">Viết Đúng Tiếng Việt</div>
+    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+    <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('about')">Về chúng tôi</button><button onclick="goTo('activity')">Hoạt động</button><button onclick="goTo('join')">Tham gia</button></div>
+    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+  </footer>
+</div>
+
+<!-- Load data trước, main sau -->
+<script src="data/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
