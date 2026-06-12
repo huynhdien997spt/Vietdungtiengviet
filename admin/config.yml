@@ -1,0 +1,152 @@
+# ============================================================
+# Decap CMS — Cấu hình cho GitHub Pages
+# Repo: huynhdien997spt/Vietdungtiengviet
+# OAuth proxy: vietdungtiengviet.netlify.app
+# ============================================================
+
+backend:
+  name: github
+  repo: huynhdien997spt/Vietdungtiengviet
+  branch: main
+  base_url: https://vietdungtiengviet.netlify.app
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "vi"
+
+collections:
+
+  # Blog & Tin tức
+  - name: "blog"
+    label: "📰 Blog & Tin tức"
+    label_singular: "Bài viết"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Tiêu đề bài viết"
+        name: title
+        widget: string
+        hint: "Ngắn gọn, rõ ràng, dưới 80 ký tự"
+
+      - label: "Ngày đăng"
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+
+      - label: "Chủ đề"
+        name: tag
+        widget: select
+        options:
+          - { label: "Sự kiện", value: "su-kien" }
+          - { label: "Phương pháp", value: "phuong-phap" }
+          - { label: "Cộng đồng", value: "cong-dong" }
+          - { label: "Học liệu", value: "hoc-lieu" }
+          - { label: "Tin tức", value: "tin-tuc" }
+
+      - label: "Tác giả"
+        name: author
+        widget: string
+        default: "Ban biên tập VĐTV"
+
+      - label: "Ảnh bìa"
+        name: image
+        widget: image
+        required: false
+        hint: "Khuyến nghị 1200×630px"
+
+      - label: "Tóm tắt"
+        name: excerpt
+        widget: text
+        hint: "Hiển thị trên trang danh sách, tối đa 160 ký tự"
+
+      - label: "Nội dung bài viết"
+        name: body
+        widget: markdown
+
+  # Sự kiện
+  - name: "events"
+    label: "📅 Sự kiện"
+    label_singular: "Sự kiện"
+    folder: "_events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Tên sự kiện"
+        name: title
+        widget: string
+
+      - label: "Thời gian tổ chức"
+        name: date
+        widget: datetime
+
+      - label: "Địa điểm"
+        name: location
+        widget: string
+        hint: "Ví dụ: Trường THPT Châu Văn Liêm, Cần Thơ"
+
+      - label: "Loại sự kiện"
+        name: type
+        widget: select
+        options:
+          - { label: "Scratch Day", value: "scratch-day" }
+          - { label: "Mùa Hè Số", value: "mua-he-so" }
+          - { label: "Workshop", value: "workshop" }
+          - { label: "Cuộc thi", value: "cuoc-thi" }
+          - { label: "Khác", value: "khac" }
+
+      - label: "Ảnh sự kiện"
+        name: image
+        widget: image
+        required: false
+
+      - label: "Mô tả"
+        name: body
+        widget: markdown
+
+      - label: "Đã diễn ra"
+        name: past
+        widget: boolean
+        default: false
+
+  # Học liệu mở
+  - name: "resources"
+    label: "📚 Học liệu mở"
+    label_singular: "Học liệu"
+    folder: "_resources"
+    create: true
+    fields:
+      - label: "Tên công cụ / tài liệu"
+        name: title
+        widget: string
+
+      - label: "Biểu tượng (emoji)"
+        name: icon
+        widget: string
+        default: "📖"
+
+      - label: "Loại"
+        name: category
+        widget: select
+        options:
+          - { label: "Công cụ trực tuyến", value: "cong-cu" }
+          - { label: "Tài liệu PDF", value: "tai-lieu" }
+          - { label: "Video hướng dẫn", value: "video" }
+          - { label: "Template / Mẫu", value: "template" }
+
+      - label: "Link truy cập"
+        name: url
+        widget: string
+        required: false
+
+      - label: "Mô tả ngắn"
+        name: description
+        widget: text
+
+      - label: "Hướng dẫn chi tiết"
+        name: body
+        widget: markdown
+        required: false
