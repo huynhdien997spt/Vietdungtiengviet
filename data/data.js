@@ -172,7 +172,7 @@ const blogData = [
       <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Kho luận văn số SP Tin học K48, ĐHCT: <a href="https://drive.google.com/drive/u/1/folders/1_f2AsNyT33FuQ8UtcS1acQwu2PbGMdd6" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>
       <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Sản phẩm American Hangout Lần I: <a href="LINK_ĐÚNG_Ở_ĐÂY" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>
       <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:20px">Xem thêm ảnh: <a href="https://drive.google.com/drive/u/1/folders/1Pz1W7U2piczwwryqRGCGoEarvGtxfwPk" target="_blank" style="color:var(--blue-soft)">Tại đây</a>.</p>  
-  `
+    `
 }
 ,{
   tag: "Sự kiện",
@@ -294,6 +294,41 @@ const blogData = [
     <img src="images/envents/ScratchDay_LT/anhtapthe.jpg" alt="Ảnh tập thể" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
 
     <p>Xin chân thành cảm ơn Ban Giám hiệu, quý thầy cô Trường THCS & THPT Long Thạnh cùng các em học sinh đã đồng hành. Hẹn gặp lại trong những hành trình tiếp theo của CTUScratchDay!</p>
+  `
+}
+,{
+  tag: "Sự kiện",
+  title: "Khơi dậy tư duy sáng tạo và kỹ năng số cho học sinh THCS An Lạc",
+  meta: "21/1/2026 · Trường THCS An Lạc",
+  img: "images/envents/AnLac/bg_anlac.jpg",
+  body: `
+    <p>Ngày 21/01/2026, Trường THCS An Lạc đã phối hợp cùng Bộ môn Sư phạm Tin học, Khoa Sư phạm Toán và Tin học, Trường Sư phạm – Đại học Cần Thơ tổ chức chương trình hoạt động ngoại khóa với chủ đề ứng dụng công nghệ trong học tập và phát triển tư duy sáng tạo dành cho học sinh toàn trường.</p>
+
+    <img src="images/envents/AnLac/toancanh.jpg" alt="Toàn cảnh chương trình" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Toàn cảnh chương trình ngoại khóa tại Trường THCS An Lạc với sự tham gia đông đảo của học sinh.</p>
+
+    <p>Chương trình đã mang đến cho các em học sinh nhiều trải nghiệm học tập mới mẻ và bổ ích. Dưới sự hướng dẫn của các giảng viên và sinh viên ngành Sư phạm Tin học, các em được làm quen với phương pháp thiết kế sơ đồ tư duy (Mindmap), giúp hệ thống hóa kiến thức, phát triển tư duy logic và nâng cao hiệu quả học tập.</p>
+
+    <img src="images/envents/AnLac/gvhd_sdtd.jpg" alt="Hướng dẫn sơ đồ tư duy" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Báo cáo viên hướng dẫn học sinh phương pháp xây dựng sơ đồ tư duy để ghi nhớ và hệ thống hóa kiến thức.</p>
+
+    <h2>OctoStudio — Lập trình sáng tạo trên di động</h2>
+    <p>Bên cạnh đó, học sinh còn được trải nghiệm ứng dụng <strong>OctoStudio</strong> – công cụ lập trình sáng tạo dành cho thiết bị di động. Thông qua các hoạt động thực hành trực tiếp, các em bước đầu tiếp cận tư duy lập trình, sáng tạo nội dung số và phát triển các kỹ năng công nghệ cần thiết trong thời đại chuyển đổi số.</p>
+
+    <img src="images/envents/AnLac/hs_octostudio.jpg" alt="Học sinh trải nghiệm OctoStudio" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Học sinh hào hứng trải nghiệm ứng dụng OctoStudio và thực hành các hoạt động sáng tạo số.</p>
+
+    <p>Không khí chương trình diễn ra sôi nổi với nhiều hoạt động tương tác, khám phá và thực hành. Các em học sinh tích cực tham gia các nhiệm vụ học tập, mạnh dạn chia sẻ ý tưởng và sản phẩm sáng tạo của mình.</p>
+
+    <img src="images/envents/AnLac/giai_dap.jpg" alt="Sinh viên hỗ trợ học sinh" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Sinh viên ngành Sư phạm Tin học hỗ trợ học sinh trong quá trình thực hành và giải đáp thắc mắc.</p>
+
+    <img src="images/envents/AnLac/luu_niem.jpg" alt="Ảnh lưu niệm" style="width:100%;height:320px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:24px">Đại biểu, giảng viên, sinh viên và học sinh chụp ảnh lưu niệm sau chương trình.</p>
+
+    <h2>Ý nghĩa chương trình</h2>
+    <p>Hoạt động ngoại khóa không chỉ giúp học sinh tiếp cận những phương pháp học tập hiện đại mà còn góp phần khơi dậy niềm yêu thích công nghệ, tinh thần sáng tạo và khả năng tự học. Đây là một hoạt động thiết thực nhằm nâng cao chất lượng giáo dục và phát triển năng lực số cho học sinh trong giai đoạn hiện nay.</p>
+    <p>Trường THCS An Lạc trân trọng cảm ơn sự đồng hành và hỗ trợ chuyên môn từ Bộ môn Sư phạm Tin học, Khoa Sư phạm Toán và Tin học, Trường Sư phạm – Đại học Cần Thơ đã góp phần tạo nên một sân chơi học thuật ý nghĩa, bổ ích và truyền cảm hứng cho học sinh nhà trường.</p>
   `
 }
   /* ── THÊM BÀI BLOG MỚI BÊN DƯỚI ──
