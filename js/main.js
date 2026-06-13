@@ -96,6 +96,17 @@ setInterval(() => moveSlider(1), 3000);
 /* ── BLOG CAROUSEL ── */
 let blogPage = 0;
 function getBlogPerPage() { return window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3; }
+/* ── SẮP XẾP BLOG THEO NGÀY MỚI NHẤT TRƯỚC ── */
+function sortBlogCards() {
+  const track = document.getElementById('blogTrack');
+  const cards = [...track.querySelectorAll('.blog-card')];
+  cards.sort((a, b) => {
+    const dateA = new Date(+a.dataset.year, (+a.dataset.month || 1) - 1, +a.dataset.day || 1);
+    const dateB = new Date(+b.dataset.year, (+b.dataset.month || 1) - 1, +b.dataset.day || 1);
+    return dateB - dateA; // mới nhất trước
+  });
+  cards.forEach(c => track.appendChild(c));
+}
 function initBlogCarousel() {
   const cards = [...document.querySelectorAll('#blogTrack .blog-card')].filter(c => !c.classList.contains('hidden'));
   const perPage = getBlogPerPage();
@@ -119,8 +130,18 @@ function moveBlog(dir) {
   initBlogCarousel();
 }
 window.addEventListener('resize', initBlogCarousel);
+sortBlogCards();
 setTimeout(initBlogCarousel, 100);
-
+function goBlogFirst() {
+  blogPage = 0;
+  initBlogCarousel();
+}
+function goBlogLast() {
+  const cards = [...document.querySelectorAll('#blogTrack .blog-card')].filter(c => !c.classList.contains('hidden'));
+  const total = Math.ceil(cards.length / getBlogPerPage());
+  blogPage = Math.max(0, total - 1);
+  initBlogCarousel();
+}
 /* ── BỘ LỌC BLOG ── */
 let activeYear = 'all', activeMonth = 'all', activeTag = 'all';
 function filterBlogSelect(sel, type) {
