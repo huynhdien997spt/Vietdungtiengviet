@@ -312,6 +312,18 @@
               <span class="blog-tag">Sự kiện</span>
             </div>
           </div>
+          
+          <div class="blog-card" onclick="openBlogModal(6)" data-year="2026" data-month="1" data-tag="su-kien">
+            <img class="blog-card-img" src="images/envents/AnLac/bg_anlac.jpg" alt="THCS An Lạc"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="blog-card-img-placeholder" style="display:none">🧠</div>
+            <div class="blog-card-body">
+              <div class="blog-date">21/1/2026</div>
+              <div class="blog-title">Khơi dậy tư duy sáng tạo và kỹ năng số cho học sinh THCS An Lạc</div>
+              <div class="blog-excerpt">Mindmap và OctoStudio mang đến một buổi sáng tràn đầy năng lượng cho học sinh Trường THCS An Lạc...</div>
+              <span class="blog-tag">Sự kiện</span>
+            </div>
+          </div>
 
         </div><!-- đóng blogTrack -->
 
@@ -338,26 +350,61 @@
   </div><!-- đóng tab-events -->
           <!-- Kho học liệu mở -->
   <div class="tab-content" id="tab-resources">
-    <div class="wrap">
-      <div class="section-label">Kho tài nguyên</div>
-      <div class="section-title">Học Liệu Mở Miễn Phí</div>
-      <div class="tool-grid">
-        <div class="tool-card"><div class="tool-icon">🗺️</div><div class="tool-name">OKMindmap</div><div class="tool-desc">Bản đồ tư duy trực tuyến – nền tảng hệ sinh thái học tập VĐTV. Miễn phí, không cài đặt.</div><a href="https://okmindmap.com" target="_blank" class="tool-link">Truy cập →</a></div>
-        <div class="tool-card"><div class="tool-icon">🔍</div><div class="tool-name">WebQuest 3.0</div><div class="tool-desc">Bài học mở tích hợp tư duy phản biện và OKMindmap.</div><a href="#" class="tool-link">Xem mẫu →</a></div>
-        <div class="tool-card"><div class="tool-icon">🐱</div><div class="tool-name">Scratch & OctoStudio</div><div class="tool-desc">Lập trình sáng tạo cho học sinh. Scratch trên máy tính, OctoStudio trên điện thoại.</div><a href="https://scratch.mit.edu" target="_blank" class="tool-link">Truy cập →</a></div>
-        <div class="tool-card"><div class="tool-icon">✏️</div><div class="tool-name">Sketchnote</div><div class="tool-desc">Ghi chú bằng hình ảnh – kết hợp chữ và ký hoạ để tư duy rõ hơn.</div><a href="#" class="tool-link">Hướng dẫn →</a></div>
-        <div class="tool-card"><div class="tool-icon">📂</div><div class="tool-name">Mindfolio</div><div class="tool-desc">Hồ sơ tư duy học tập mở – ghi lại hành trình Học → Phản tư → Sáng tạo → Chia sẻ.</div><a href="#" class="tool-link">Tìm hiểu →</a></div>
-        <div class="tool-card"><div class="tool-icon">📘</div><div class="tool-name">BigBook & Sổ tay VĐTV</div><div class="tool-desc">Tài liệu phương pháp và văn hoá dự án. Mở cho cộng đồng tải tự do.</div><a href="#" class="tool-link">Tải về →</a></div>
+  <div class="wrap">
+
+    <!-- WEBQUEST PREVIEW -->
+    <div class="section-label">Trải nghiệm trực tiếp</div>
+    <div class="section-title">WebQuest for Learn</div>
+    <p style="color:var(--warm-gray);font-size:0.94rem;line-height:1.9;max-width:600px;margin-top:-24px;margin-bottom:32px">
+      Khám phá mô hình WebQuest ngay tại đây — bài học mở tích hợp OKMindmap và tư duy phản biện.
+      <br>Tác giả: Trần Thanh Vũ, Sư phạm Tin học K44, ĐHCT
+    </p>
+
+    <a href="https://sites.google.com/view/webquestforlearn" target="_blank"
+        style="display:block;text-decoration:none;margin-bottom:60px;border-radius:10px;overflow:hidden;
+                box-shadow:0 4px 24px rgba(26,48,82,0.1);border:1px solid rgba(26,48,82,0.1);
+                transition:transform 0.25s,box-shadow 0.25s"
+        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 36px rgba(26,48,82,0.16)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 24px rgba(26,48,82,0.1)'">
+
+        <div style="position:relative">
+          <img src="images/OER/webquestforlearn.jpg" alt="WebQuest preview"
+              style="width:100%;height:500px;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,48,82,0.85) 0%,rgba(26,48,82,0.1) 50%,transparent 100%);
+                      display:flex;flex-direction:column;justify-content:flex-end;padding:28px">
+            <div style="color:var(--gold-light);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px">Xem trực tiếp trên Google Sites</div>
+            <div style="color:#fff;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:6px">WebQuest for Learn</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:0.85rem">sites.google.com/view/webquestforlearn</div>
+          </div>
+          <div style="position:absolute;top:24px;right:24px;background:var(--gold);color:var(--blue-deep);
+                      font-family:'Playfair Display',serif;font-weight:700;font-size:0.85rem;
+                      padding:8px 18px;border-radius:999px">
+            Mở trang →
       </div>
     </div>
+  </a>
+
+    <!-- KHO TÀI NGUYÊN -->
+    <div class="section-label">Kho tài nguyên</div>
+    <div class="section-title">Học Liệu Mở Miễn Phí</div>
+    <div class="tool-grid">
+      <div class="tool-card"><div class="tool-icon">🗺️</div><div class="tool-name">OKMindmap</div><div class="tool-desc">Bản đồ tư duy trực tuyến – nền tảng hệ sinh thái học tập VĐTV. Miễn phí, không cài đặt.</div><a href="https://okmindmap.com" target="_blank" class="tool-link">Truy cập →</a></div>
+      <div class="tool-card"><div class="tool-icon">🔍</div><div class="tool-name">WebQuest 3.0</div><div class="tool-desc">Bài học mở tích hợp tư duy phản biện và OKMindmap.</div><a href="#" class="tool-link">Xem mẫu →</a></div>
+      <div class="tool-card"><div class="tool-icon">🐱</div><div class="tool-name">Scratch & OctoStudio</div><div class="tool-desc">Lập trình sáng tạo cho học sinh. Scratch trên máy tính, OctoStudio trên điện thoại.</div><a href="https://scratch.mit.edu" target="_blank" class="tool-link">Truy cập →</a></div>
+      <div class="tool-card"><div class="tool-icon">✏️</div><div class="tool-name">Sketchnote</div><div class="tool-desc">Ghi chú bằng hình ảnh – kết hợp chữ và ký hoạ để tư duy rõ hơn.</div><a href="#" class="tool-link">Hướng dẫn →</a></div>
+      <div class="tool-card"><div class="tool-icon">📂</div><div class="tool-name">Mindfolio</div><div class="tool-desc">Hồ sơ tư duy học tập mở – ghi lại hành trình Học → Phản tư → Sáng tạo → Chia sẻ.</div><a href="#" class="tool-link">Tìm hiểu →</a></div>
+      <div class="tool-card"><div class="tool-icon">📘</div><div class="tool-name">BigBook & Sổ tay VĐTV</div><div class="tool-desc">Tài liệu phương pháp và văn hoá dự án. Mở cho cộng đồng tải tự do.</div><a href="#" class="tool-link">Tải về →</a></div>
+    </div>
+
   </div>
-  <footer>
-    <div class="footer-title">Viết Đúng Tiếng Việt</div>
-    <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
-    <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('about')">Về chúng tôi</button><button onclick="goTo('join')">Tham gia</button><button onclick="goTo('donate')">Ủng hộ</button></div>
-    <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
-  </footer>
 </div>
+
+<footer>
+  <div class="footer-title">Viết Đúng Tiếng Việt</div>
+  <p class="footer-quote">"Viết để hiểu mình, để yêu người, và để phụng sự cuộc đời."</p>
+  <div class="footer-nav"><button onclick="goTo('home')">Trang chủ</button><button onclick="goTo('about')">Về chúng tôi</button><button onclick="goTo('join')">Tham gia</button><button onclick="goTo('donate')">Ủng hộ</button></div>
+  <p class="footer-credit">Biên soạn bởi Huỳnh Văn Diễn và các thành viên VĐTV · 2021–2026</p>
+</footer>
 
 <!-- BLOG MODAL -->
 <div class="modal-overlay" id="blogModal" onclick="closeModal(event)">
