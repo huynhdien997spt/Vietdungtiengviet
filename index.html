@@ -248,7 +248,7 @@
                Bước 1: Thêm blog-card bên dưới (tăng số openBlogModal)
                Bước 2: Thêm object vào blogData trong data.js -->
 
-          <div class="blog-card" onclick="openBlogModal(0)" data-year="2025" data-month="5" data-tag="su-kien">
+          <div class="blog-card" onclick="openBlogModal(0)" data-year="2025" data-month="5"  data-day="10" data-tag="su-kien">
             <img class="blog-card-img" src="images/envents/AGU/star_envent.jpg" alt="Scratch Day AGU" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">🖥️</div>
             <div class="blog-card-body">
@@ -259,7 +259,7 @@
             </div>
           </div>
 
-          <div class="blog-card" onclick="openBlogModal(1)" data-year="2025" data-month="1" data-tag="phuong-phap">
+          <div class="blog-card" onclick="openBlogModal(1)" data-year="2025" data-month="1"  data-day="1" data-tag="phuong-phap">
             <img class="blog-card-img" src="images/blog /webquest/Mekong_river.jpg" alt="Mekong" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">🖥️</div>
             <div class="blog-card-body">
@@ -270,7 +270,7 @@
             </div>
           </div>
 
-          <div class="blog-card" onclick="openBlogModal(2)" data-year="2024" data-month="11" data-tag="cong-dong">
+          <div class="blog-card" onclick="openBlogModal(2)" data-year="2024" data-month="11"  data-day="5" data-tag="cong-dong">
             <div class="blog-card-img-placeholder">🤝</div>
             <div class="blog-card-body">
               <div class="blog-date">11/2024</div>
@@ -280,7 +280,7 @@
             </div>
           </div>
 
-          <div class="blog-card" onclick="openBlogModal(3)" data-year="2026" data-month="4" data-tag="su-kien">
+          <div class="blog-card" onclick="openBlogModal(3)" data-year="2026" data-month="4"  data-day="20" data-tag="su-kien">
             <img class="blog-card-img" src="images/envents/LVS/tapthe.jpg" alt="Luận văn số" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">📚</div>
             <div class="blog-card-body">
@@ -291,7 +291,7 @@
             </div>
           </div>
 
-          <div class="blog-card" onclick="openBlogModal(4)" data-year="2026" data-month="4" data-tag="su-kien">
+          <div class="blog-card" onclick="openBlogModal(4)" data-year="2026" data-month="4"  data-day="04" data-tag="su-kien">
             <img class="blog-card-img" src="images/envents/ScratchDay_TLA/anh_bia.jpg" alt="Long Thành A" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">🌱</div>
             <div class="blog-card-body">
@@ -302,7 +302,7 @@
             </div>
           </div>
 
-          <div class="blog-card" onclick="openBlogModal(5)" data-year="2026" data-month="4" data-tag="su-kien">
+          <div class="blog-card" onclick="openBlogModal(5)" data-year="2026" data-month="4"  data-day="23" data-tag="su-kien">
             <img class="blog-card-img" src="images/envents/ScratchDay_LT/anh_bia.jpg" alt="Long Thạnh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">🚀</div>
             <div class="blog-card-body">
@@ -313,7 +313,7 @@
             </div>
           </div>
           
-          <div class="blog-card" onclick="openBlogModal(6)" data-year="2026" data-month="1" data-tag="su-kien">
+          <div class="blog-card" onclick="openBlogModal(6)" data-year="2026" data-month="1"  data-day="21" data-tag="su-kien">
             <img class="blog-card-img" src="images/envents/AnLac/bg_anlac.jpg" alt="THCS An Lạc"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="blog-card-img-placeholder" style="display:none">🧠</div>
@@ -327,10 +327,12 @@
 
         </div><!-- đóng blogTrack -->
 
-        <div class="blog-nav">
+       <div class="blog-nav">
+          <button class="blog-nav-btn" onclick="goBlogFirst()" title="Trang đầu">&#171;</button>
           <button class="blog-nav-btn" onclick="moveBlog(-1)">&#8249;</button>
           <div class="blog-nav-dots" id="blogDots"></div>
           <button class="blog-nav-btn" onclick="moveBlog(1)">&#8250;</button>
+          <button class="blog-nav-btn" onclick="goBlogLast()" title="Trang cuối">&#187;</button>
         </div>
       </div><!-- đóng blog-carousel-wrap -->
 
