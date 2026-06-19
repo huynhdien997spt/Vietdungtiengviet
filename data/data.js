@@ -331,6 +331,120 @@ const blogData = [
     <p>Trường THCS An Lạc trân trọng cảm ơn sự đồng hành và hỗ trợ chuyên môn từ Bộ môn Sư phạm Tin học, Khoa Sư phạm Toán và Tin học, Trường Sư phạm – Đại học Cần Thơ đã góp phần tạo nên một sân chơi học thuật ý nghĩa, bổ ích và truyền cảm hứng cho học sinh nhà trường.</p>
   `
 }
+,{
+  tag: "Sự kiện",
+  title: "Cà Mau Scratch Day 2024 – Hành trình lan tỏa tư duy sáng tạo đến vùng đất cuối trời Nam",
+  meta: "21/9/2024 · Ban tổ chức CTUScratchDay",
+  img: "images/envents/CaMau/bia.jpg",
+  body: `
+    <p style="font-style:italic;color:var(--blue-soft);border-left:3px solid var(--gold);padding-left:16px;margin-bottom:24px">"Tuổi trẻ là những chuyến đi. Có những chuyến đi để khám phá, có những chuyến đi để cống hiến. Và hành trình đến với Cà Mau Scratch Day 2024 là một chuyến đi như thế."</p>
+
+    <p>23 giờ 30 phút ngày 20/09/2024, đoàn giảng viên và sinh viên bắt đầu chuẩn bị cho hành trình đến huyện Đầm Dơi, tỉnh Cà Mau. Không khí háo hức hiện rõ trên từng khuôn mặt khi mọi người cùng nhau kiểm tra học liệu, quà tặng và thiết bị phục vụ chương trình.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh1.jpg" alt="Đoàn tập trung xuất phát" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh2.jpg" alt="Chuẩn bị học liệu" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Đoàn tập trung tại Phòng 2 Tỷ và chuẩn bị học liệu, thiết bị trước giờ xuất phát.</p>
+
+    <p>Một cơn mưa lớn bất ngờ xuất hiện nhưng không thể làm giảm tinh thần của cả đoàn. Những chiếc áo mưa vội khoác lên người, những tiếng cười vang lên giữa đêm khuya trở thành kỷ niệm khó quên của chuyến đi.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh3.jpg" alt="Cơn mưa bất ngờ" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh4.jpg" alt="Hành trình xuyên đêm" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Cơn mưa bất ngờ trước giờ khởi hành và hành trình xuyên đêm về Cà Mau.</p>
+
+    <h2>Bình minh trên bến phà Tam Giang</h2>
+    <p>Bến phà Tam Giang hiện ra trong ánh bình minh yên bình của vùng sông nước. Những chuyến phà đầu ngày chở theo học sinh đến trường, người dân đi làm và cả những người trẻ mang trong mình khát vọng lan tỏa tri thức.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh6.jpg" alt="Bình minh Tam Giang" style="width:100%;height:180px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh7.jpg" alt="Chờ phà" style="width:100%;height:180px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh8.jpg" alt="Qua phà" style="width:100%;height:180px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Bình minh tại bến phà Tam Giang — khoảnh khắc bình yên trước một ngày đầy năng lượng.</p>
+
+    <h2>Ngày hội bắt đầu</h2>
+    <p>Ngay từ sáng sớm, khuôn viên Trường THCS & THPT Nguyễn Huân đã trở nên sôi động. Điểm đặc biệt của chương trình là hoạt động được triển khai đồng thời tại <strong>24 lớp học từ khối 6 đến khối 12</strong>, mỗi khối gồm 2 lớp tham gia trải nghiệm các chuyên đề về <strong>Mindmap</strong> và <strong>OctoStudio</strong>.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh11.jpg" alt="Lớp khối 6" style="width:100%;height:200px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh12.jpg" alt="Lớp khối 7" style="width:100%;height:200px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh13.jpg" alt="Lớp khối 8" style="width:100%;height:200px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh14.jpg" alt="Lớp khối 9" style="width:100%;height:200px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Sinh viên hướng dẫn tại các lớp.</p>
+
+    <h2>Khám phá sức mạnh của Mindmap</h2>
+    <p>Tại chuyên đề Mindmap, học sinh được tiếp cận phương pháp học tập trực quan thông qua từ khóa, hình ảnh và màu sắc. Các em không chỉ học cách ghi nhớ kiến thức hiệu quả hơn mà còn phát triển khả năng tư duy hệ thống và sáng tạo. Nhiều sản phẩm độc đáo đã được tạo ra chỉ sau thời gian ngắn thực hành.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh16.jpg" alt="Học sinh vẽ Mindmap" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh17.jpg" alt="Sản phẩm Mindmap" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Học sinh thực hành vẽ sơ đồ tư duy và những sản phẩm Mindmap đầy màu sắc.</p>
+
+    <h2>Sáng tạo cùng OctoStudio</h2>
+    <p>Thông qua OctoStudio, các em được trải nghiệm lập trình kéo thả trên thiết bị di động, tạo nên những câu chuyện tương tác, trò chơi đơn giản và các sản phẩm sáng tạo mang dấu ấn cá nhân. Niềm vui hiện rõ trên khuôn mặt các em khi nhân vật đầu tiên chuyển động hay khi chương trình đầu tiên hoạt động thành công.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0">
+      <img src="images/envents/CaMau/anh18.jpg" alt="Học sinh thực hành OctoStudio" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+      <img src="images/envents/CaMau/anh19.jpg" alt="Sản phẩm OctoStudio" style="width:100%;height:220px;object-fit:cover;border-radius:4px">
+    </div>
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-4px;margin-bottom:24px">Học sinh hào hứng thực hành lập trình sáng tạo với OctoStudio.</p>
+
+    <h2>Những giá trị còn đọng lại</h2>
+    <p>Một ngày hội khép lại, nhưng những cảm xúc đẹp vẫn còn ở lại. Đó là niềm vui của học sinh khi được tiếp cận những phương pháp học tập mới. Đó là sự nhiệt huyết của các bạn sinh viên khi đứng lớp. Và đó cũng là niềm hạnh phúc của những người làm giáo dục khi nhìn thấy những hạt giống sáng tạo được gieo xuống.</p>
+    <p>Cà Mau Scratch Day 2024 không chỉ là một chương trình trải nghiệm công nghệ. Đó còn là hành trình kết nối, sẻ chia và lan tỏa tinh thần học tập sáng tạo đến với học sinh nơi vùng đất cực Nam của Tổ quốc.</p>
+
+    <img src="images/envents/CaMau/anh20.jpg" alt="Ảnh tập thể" style="width:100%;height:360px;object-fit:cover;margin:16px 0;border-radius:4px">
+    <p style="font-size:0.82rem;color:var(--warm-gray);font-style:italic;margin-top:-8px;margin-bottom:20px">Ảnh tập thể đoàn và nhà trường — kết thúc một ngày đầy ý nghĩa tại vùng đất cuối trời Nam.</p>
+
+    <p>Xin cảm ơn Trường THCS & THPT Nguyễn Huân đã đồng hành cùng chương trình. Hẹn gặp lại trong những hành trình lan tỏa tri thức tiếp theo!</p>
+  `
+}
+
+,{
+  tag: "Cộng đồng",
+  title: "Mùa Hè Số 2026 – Chi Bằng Học",
+  meta: "8/6 – 21/8/2026 · Ban tổ chức",
+  img: "images/blog /MHS2026/bia.jpg",
+  body: `
+    <p>Ba mẹ đang tìm một sân chơi hè bổ ích cho con? Hãy để các em có một mùa hè thật vui, sáng tạo và đầy trải nghiệm cùng <strong>Mùa Hè Số 2026 – Chi Bằng Học</strong>!</p>
+    <p>Chương trình hoàn toàn <strong>MIỄN PHÍ</strong> dành cho học sinh từ 7–18 tuổi với nhiều hoạt động hấp dẫn:</p>
+
+    <p>🎨 Vẽ tranh, Mindmap và Sketchnote<br>
+    💻 Lập trình Scratch, OctoStudio, Snap!<br>
+    🎵 Sáng tác nhạc, viết truyện<br>
+    🎮 Tạo game, hoạt hình và sản phẩm công nghệ thú vị<br>
+    🤝 Rèn kỹ năng giao tiếp, làm việc nhóm và tư duy sáng tạo</p>
+
+    <p>Học mà chơi – chơi mà học trong môi trường thân thiện, tích cực và đầy cảm hứng.</p>
+
+    <h2>Đội ngũ Ban tổ chức & Giảng dạy</h2>
+
+    <p><strong>Cố vấn chương trình</strong></p>
+    <p>– Tiến sĩ Bùi Lê Diễm – Giảng viên Khoa Toán và Tin học, Trường Sư phạm, Đại học Cần Thơ.<br>
+    – Tiến sĩ Thái Thị Ngọc Thúy – Giảng viên Khoa Toán và Tin học, Trường Sư phạm, Đại học Cần Thơ.</p>
+
+    <p><strong>Đại diện điều phối</strong></p>
+    <p>– Cử nhân Huỳnh Văn Diễn – Sư phạm Tin học, Đại học Cần Thơ.<br>
+    – Sinh viên Phạm Hoàng Trung Hậu, K48 – Sư phạm Tin học, Đại học Cần Thơ.</p>
+
+    <p><strong>Đội ngũ giảng dạy</strong></p>
+    <p>Các bạn sinh viên ngành Sư phạm Tin học đầy nhiệt huyết, yêu trẻ và đam mê công nghệ.</p>
+
+    <h2>Thông tin đăng ký</h2>
+    <p>📅 <strong>Hạn đăng ký:</strong> 08/06/2026</p>
+    <p>📝 <strong>Link đăng ký:</strong> <a href="https://forms.gle/wPE16vqNMcsipQSD7" target="_blank" style="color:var(--blue-soft);font-weight:600">forms.gle/wPE16vqNMcsipQSD7</a></p>
+    <p>💬 <strong>Nhóm Zalo:</strong> <a href="https://zalo.me/g/rdzjdv511" target="_blank" style="color:var(--blue-soft);font-weight:600">zalo.me/g/rdzjdv511</a></p>
+    <p>📘 <strong>Group Facebook:</strong> <a href="https://www.facebook.com/share/18ktpKGNsS/?mibextid=wwXIfr" target="_blank" style="color:var(--blue-soft);font-weight:600">facebook.com/share/18ktpKGNsS</a></p>
+    <p>📞 <strong>Liên hệ:</strong> 0794856553 (Hậu) – 0828294600 (Huỳnh Diễn)</p>
+
+    <p style="font-style:italic;color:var(--blue-soft);margin-top:24px">Nhanh tay đăng ký để cùng nhau tạo nên một mùa hè thật đáng nhớ nhé!</p>
+  `
+}
   /* ── THÊM BÀI BLOG MỚI BÊN DƯỚI ──
   https://scratch.mit.edu/projects/1318173601/
   ,{
